@@ -32,9 +32,9 @@
 		{
 			"viewType" 		:  "EditText",
 			"viewProperties"   :  {
-				"width"	    		:  100,
+				"width"	    		:  250,
 				"height"	   		:  50,
-				"background"	    :  "#ffffff",
+				"background"	    :  "#A9A9A9",
 				"alignment"		    :  "CENTER_VERTICAL",
 				"margin" 		    :  {
 					"left"			    :  10,
@@ -44,11 +44,11 @@
 				}
 			},
 			"contents"           	:  {
-				"text"                 	:  "Click",
-				"size"	    		    :  10,
-				"color"  			    :  "#3F51B5",
+				"text"                 	:  "",
+				"size"	    		    :  4,
+				"color"  			    :  "#696969",
 				"gravity"			    :  "CENTER",
-				"hint"			        :  "Do Not Click",
+				"hint"			        :  "Enter your Name",
 				"padding" 		        :  {
 					"left"			        :  10,
 					"right"			        :  10,
@@ -60,27 +60,27 @@
 		{
 			"viewType" 		:  "CheckBox",
 			"viewProperties"   :  {
-				"width"	    		:  100,
+				"width"	    		:  250,
 				"height"	   		:  50,
-				"background"	    	:  "#ffffff",
-				"alignment"		:  "CENTER",
-				"margin" 		:  {
-					"left"			:  10,
-					"right"			:  10,
-					"top"			:  10,
+				"background"	    :  "#00ffffff",
+				"alignment"		    :  "CENTER",
+				"margin" 		    :  {
+					"left"			    :  10,
+					"right"			    :  10,
+					"top"			    :  10,
 					"bottom"			:  10
 				}
 			},
 			"contents"           	:  {
 				"text"                 	:  "Agree to Terms and Conditions",
-				"size"	    		:  10,
-				"color"  			:  "#3F51B5",
-				"gravity"			:  "CENTER",
-				"hint"			:  "Do Not Click",
-				"padding" 		:  {
-					"left"			:  10,
-					"right"			:  10,
-					"top"			:  10,
+				"size"	    		    :  10,
+				"color"  			    :  "#3F51B5",
+				"gravity"			    :  "CENTER",
+				"hint"			    :  "Do Not Click",
+				"padding" 		    :  {
+					"left"			    :  10,
+					"right"			    :  10,
+					"top"			    :  10,
 					"bottom"			:  10
 				}
 			}

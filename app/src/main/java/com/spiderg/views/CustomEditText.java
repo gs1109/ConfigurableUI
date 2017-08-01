@@ -5,7 +5,7 @@ import android.graphics.Color;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.spiderg.configurableui.ConfigurableUIApplication;
@@ -15,23 +15,23 @@ import com.spiderg.viewsDataModel.ViewListData;
 /**
  *      Generates the editText on the basis of properties passed...
  */
-public class CustomButton implements ICustomView
+public class CustomEditText implements ICustomView
 {
-    Button                      button;
+    EditText                    editText;
     LinearLayout                parentLayout;
     LinearLayout.LayoutParams   layoutParams;
 
 
 
-    public  CustomButton(ViewListData.ViewData viewData, Context context)
+    public CustomEditText(ViewListData.ViewData viewData, Context context)
     {
-        parentLayout = new LinearLayout(context);
-        button       = new Button(context);
+        parentLayout    = new LinearLayout(context);
+        editText        = new EditText(context);
 
         setBasicViewsProperties(viewData);
         setViewsContentProperties(viewData);
 
-        parentLayout.addView(button, layoutParams);
+        parentLayout.addView(editText, layoutParams);
     }
 
 
@@ -52,7 +52,7 @@ public class CustomButton implements ICustomView
                 (int)(viewData.getViewProperties().getMargin().getBottom() * ConfigurableUIApplication.getInstance().SCREEN_DENSITY)
         );
 
-        button.setBackgroundColor(Color.parseColor(viewData.getViewProperties().getBackground()));
+        editText.setBackgroundColor(Color.parseColor(viewData.getViewProperties().getBackground()));
 
         if(viewData.getViewProperties().getAlignment().equalsIgnoreCase("CENTER"))
         {
@@ -66,7 +66,6 @@ public class CustomButton implements ICustomView
         {
             layoutParams.gravity = Gravity.CENTER_HORIZONTAL;
         }
-
     }
 
 
@@ -76,27 +75,27 @@ public class CustomButton implements ICustomView
     private void setViewsContentProperties(ViewListData.ViewData viewData)
     {
         // Setting Text properties of the View....
-        button.setText(viewData.getContents().getText());
-        button.setTextSize(TypedValue.COMPLEX_UNIT_SP, viewData.getContents().getSize() * ConfigurableUIApplication.getInstance().SCREEN_DENSITY);
-        button.setTextColor(Color.parseColor(viewData.getContents().getColor()));
-        button.setAllCaps(false);
+        editText.setText(viewData.getContents().getText());
+        editText.setTextSize(TypedValue.COMPLEX_UNIT_SP, viewData.getContents().getSize() * ConfigurableUIApplication.getInstance().SCREEN_DENSITY);
+        editText.setTextColor(Color.parseColor(viewData.getContents().getColor()));
+        editText.setAllCaps(false);
 
         // Setting Gravity of the texts...  Only Showing these three alignments....
         if(viewData.getContents().getGravity().equalsIgnoreCase("CENTER"))
         {
-            button.setGravity(Gravity.CENTER);
+            editText.setGravity(Gravity.CENTER);
         }
         else if(viewData.getContents().getGravity().equalsIgnoreCase("CENTER_VERTICAL"))
         {
-            button.setGravity(Gravity.CENTER_VERTICAL);
+            editText.setGravity(Gravity.CENTER_VERTICAL);
         }
         else if(viewData.getContents().getGravity().equalsIgnoreCase("CENTER_HORIZONTAL"))
         {
-            button.setGravity(Gravity.CENTER_HORIZONTAL);
+            editText.setGravity(Gravity.CENTER_HORIZONTAL);
         }
 
-        button.setHint(viewData.getContents().getHint());
-        button.setPadding(
+        editText.setHint(viewData.getContents().getHint());
+        editText.setPadding(
                 (int)(viewData.getContents().getPadding().getLeft()   * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),
                 (int)(viewData.getContents().getPadding().getTop()    * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),
                 (int)(viewData.getContents().getPadding().getRight()  * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),

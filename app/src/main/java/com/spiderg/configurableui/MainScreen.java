@@ -16,7 +16,7 @@ import com.spiderg.views.ViewGeneratorFactory;
 
 
 /*
- *      Class which generates the views based on the request made to the factory class...
+ *  Class which generates the views based on the request made to the factory class...
  */
 public class MainScreen extends Activity
 {
@@ -48,7 +48,7 @@ public class MainScreen extends Activity
      */
     private void generateViews()
     {
-        View childView = ViewGeneratorFactory.getDynamicView(0, MainScreen.this);
+        View childView = ViewGeneratorFactory.getDynamicView(1, MainScreen.this);
 
         if(childView != null)
         {

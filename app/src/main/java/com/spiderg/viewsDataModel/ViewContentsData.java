@@ -4,14 +4,14 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+
 /**
  * Contains the generic views contents including texts, its sizes, color and list of items for spinners & radiobuttons.
  */
-
 public class ViewContentsData implements Serializable
 {
     @SerializedName("text")
-    public int      text;
+    public String   text;
 
     @SerializedName("size")
     public int      size;
@@ -34,11 +34,11 @@ public class ViewContentsData implements Serializable
 
 
 
-    public int getText() {
+    public String getText() {
         return text;
     }
 
-    public void setText(int text) {
+    public void setText(String text) {
         this.text = text;
     }
 

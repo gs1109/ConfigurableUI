@@ -3,6 +3,7 @@ package com.spiderg.viewsDataModel;
 import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 
+
 /**
  * Contains all the basic view properties which would be common to all view types....
  */
@@ -21,7 +22,7 @@ public class ViewBasicPropertiesData implements Serializable
     public String   alignment;
 
     @SerializedName("margin")
-    public String   margin;
+    public Margin   margin;
 
 
 
@@ -58,11 +59,11 @@ public class ViewBasicPropertiesData implements Serializable
         this.alignment = alignment;
     }
 
-    public String getMargin() {
+    public Margin getMargin() {
         return margin;
     }
 
-    public void setMargin(String margin) {
+    public void setMargin(Margin margin) {
         this.margin = margin;
     }
 

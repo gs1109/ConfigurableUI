@@ -1,0 +1,157 @@
+{ 
+	"view_rows" : 
+	[
+		{
+			"viewType" 		:  "Button",
+			"viewProperties"   :  {
+				"width"	    		:  100,
+				"height"	   		:  50,
+				"background"	    	:  "#ffffff",
+				"alignment"		:  "CENTER_VERTICAL",
+				"margin" 		:  {
+					"left"			:  10,
+					"right"			:  10,
+					"top"			:  10,
+					"bottom"			:  10
+				}
+			},
+			"contents"           	:  {
+				"text"                 	:  "Click",
+				"size"	    		:  10,
+				"color"  			:  "#3F51B5",
+				"gravity"			:  "CENTER_HORIZONTAL",
+				"hint"			:  "Do Not Click",
+				"padding" 		:  {
+					"left"			:  10,
+					"right"			:  10,
+					"top"			:  10,
+					"bottom"			:  10
+				}
+			}
+		},
+		{
+			"viewType" 		:  "EditText",
+			"viewProperties"   :  {
+				"width"	    		:  100,
+				"height"	   		:  50,
+				"background"	    	:  "#ffffff",
+				"alignment"		:  "CENTER_VERTICAL",
+				"margin" 		:  {
+					"left"			:  10,
+					"right"			:  10,
+					"top"			:  10,
+					"bottom"			:  10
+				}
+			},
+			"contents"           	:  {
+				"text"                 	:  "Click",
+				"size"	    		:  10,
+				"color"  			:  "#3F51B5",
+				"gravity"			:  "CENTER",
+				"hint"			:  "Do Not Click",
+				"padding" 		:  {
+					"left"			:  10,
+					"right"			:  10,
+					"top"			:  10,
+					"bottom"			:  10
+				}
+			}
+		},
+		{
+			"viewType" 		:  "CheckBox",
+			"viewProperties"   :  {
+				"width"	    		:  100,
+				"height"	   		:  50,
+				"background"	    	:  "#ffffff",
+				"alignment"		:  "CENTER",
+				"margin" 		:  {
+					"left"			:  10,
+					"right"			:  10,
+					"top"			:  10,
+					"bottom"			:  10
+				}
+			},
+			"contents"           	:  {
+				"text"                 	:  "Agree to Terms and Conditions",
+				"size"	    		:  10,
+				"color"  			:  "#3F51B5",
+				"gravity"			:  "CENTER",
+				"hint"			:  "Do Not Click",
+				"padding" 		:  {
+					"left"			:  10,
+					"right"			:  10,
+					"top"			:  10,
+					"bottom"			:  10
+				}
+			}
+		},
+		{
+			"viewType" 		:  "RadioButton",
+			"viewProperties"   :  {
+				"width"	    		:  100,
+				"height"	   		:  50,
+				"background"	    	:  "#ffffff",
+				"alignment"		:  "CENTER",
+				"margin" 		:  {
+					"left"			:  10,
+					"right"			:  10,
+					"top"			:  10,
+					"bottom"			:  10
+				}
+			},
+			"contents"           	:  {
+				"text"                 	:  "Agree to Terms and Conditions",
+				"size"	    		:  10,
+				"color"  			:  "#3F51B5",
+				"gravity"			:  "CENTER",
+				"hint"			:  "Do Not Click",
+				"padding" 		:  {
+					"left"			:  10,
+					"right"			:  10,
+					"top"			:  10,
+					"bottom"			:  10
+				},
+				"options"			:  [
+					"Male",
+					"Female"		
+				]
+			}
+		},
+		{
+			"viewType" 		:  "RadioButton",
+			"viewProperties"   :  {
+				"width"	    		:  100,
+				"height"	   		:  50,
+				"background"	    	:  "#ffffff",
+				"alignment"		:  "CENTER",
+				"margin" 		:  {
+					"left"			:  10,
+					"right"			:  10,
+					"top"			:  10,
+					"bottom"			:  10
+				}
+			},
+			"contents"           	:  {
+				"text"                 	:  "Agree to Terms and Conditions",
+				"size"	    		:  10,
+				"color"  			:  "#3F51B5",
+				"gravity"			:  "CENTER",
+				"hint"			:  "Do Not Click",
+				"padding" 		:  {
+					"left"			:  10,
+					"right"			:  10,
+					"top"			:  10,
+					"bottom"			:  10
+				},
+				"options"			:  [
+					"Delhi",
+					"Bangalore",
+					"Mumbai",
+					"Pune",
+					"Chennai",	
+					"Hyderabad"		
+				]
+			}
+		}
+	]
+}

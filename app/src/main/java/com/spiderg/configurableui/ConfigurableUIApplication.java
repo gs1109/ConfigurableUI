@@ -16,6 +16,8 @@ public class ConfigurableUIApplication extends Application
     public      float    Y_MULTIPLIER;
     public      float    SCREEN_DENSITY;
 
+    public      String   VIEW_JSON_FILE_NAME  =  "ConfigurableUIJSON.txt";
+
 
     public static synchronized ConfigurableUIApplication getInstance()
     {

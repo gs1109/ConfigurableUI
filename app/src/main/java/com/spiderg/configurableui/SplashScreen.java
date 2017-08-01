@@ -5,10 +5,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
 
-/**
- * Created by Gaurav on 01/08/17.
- */
 
+/*
+ *    Launcher activity where we load the JSON file and deserialize it to the specific classes.
+ *    And once done, we traverse to the MainScreen activity after a pause...
+ */
 public class SplashScreen extends Activity
 {
 

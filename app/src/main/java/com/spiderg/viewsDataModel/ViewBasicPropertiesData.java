@@ -1,31 +1,31 @@
 package com.spiderg.viewsDataModel;
 
 import com.google.gson.annotations.SerializedName;
-
 import java.io.Serializable;
 
 /**
- * Created by Gaurav on 01/08/17.
+ * Contains all the basic view properties which would be common to all view types....
  */
-
-public class ViewBasicProperties implements Serializable
+public class ViewBasicPropertiesData implements Serializable
 {
     @SerializedName("width")
-    public int width;
+    public int      width;
 
     @SerializedName("height")
-    public int height;
+    public int      height;
 
     @SerializedName("background")
-    public String background;
+    public String   background;
 
     @SerializedName("alignment")
-    public String alignment;
+    public String   alignment;
 
     @SerializedName("margin")
-    public String margin;
+    public String   margin;
 
 
+
+    
     public int getWidth() {
         return width;
     }
@@ -71,16 +71,18 @@ public class ViewBasicProperties implements Serializable
     public class Margin implements Serializable
     {
         @SerializedName("left")
-        public int left;
+        public int      left;
 
         @SerializedName("right")
-        public int right;
+        public int      right;
 
         @SerializedName("top")
-        public String top;
+        public String   top;
 
         @SerializedName("bottom")
-        public String bottom;
+        public String   bottom;
+
+
 
 
         public int getLeft() {

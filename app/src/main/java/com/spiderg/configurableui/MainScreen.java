@@ -48,7 +48,7 @@ public class MainScreen extends Activity
      */
     private void generateViews()
     {
-        View childView = ViewGeneratorFactory.getDynamicView(1, MainScreen.this);
+        View childView = ViewGeneratorFactory.getDynamicView(2, MainScreen.this);
 
         if(childView != null)
         {

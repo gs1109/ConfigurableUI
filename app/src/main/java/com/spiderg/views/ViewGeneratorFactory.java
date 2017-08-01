@@ -23,7 +23,7 @@ public class ViewGeneratorFactory
         }
         else if(isCheckBox(index))
         {
-            return new CustomEditText(getViewDataAtIndex(index), context).getView();
+            return new CustomCheckBox(getViewDataAtIndex(index), context).getView();
         }
         else if(isRadioButton(index))
         {

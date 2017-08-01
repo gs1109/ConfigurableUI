@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 
 /**
- * Contains all the basic view properties which would be common to all view types....
+ *   Contains all the basic view properties which would be common to all view types....
  */
 public class ViewBasicPropertiesData implements Serializable
 {

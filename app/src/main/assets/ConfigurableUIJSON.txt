@@ -60,7 +60,7 @@
 		{
 			"viewType" 		:  "CheckBox",
 			"viewProperties"   :  {
-				"width"	    		:  250,
+				"width"	    		:  300,
 				"height"	   		:  50,
 				"background"	    :  "#00ffffff",
 				"alignment"		    :  "CENTER",
@@ -73,15 +73,15 @@
 			},
 			"contents"           	:  {
 				"text"                 	:  "Agree to Terms and Conditions",
-				"size"	    		    :  10,
+				"size"	    		    :  4,
 				"color"  			    :  "#3F51B5",
 				"gravity"			    :  "CENTER",
-				"hint"			    :  "Do Not Click",
-				"padding" 		    :  {
-					"left"			    :  10,
-					"right"			    :  10,
-					"top"			    :  10,
-					"bottom"			:  10
+				"hint"			        :  "Do Not Click",
+				"padding" 		        :  {
+					"left"			        :  10,
+					"right"			        :  10,
+					"top"			        :  10,
+					"bottom"			    :  10
 				}
 			}
 		},

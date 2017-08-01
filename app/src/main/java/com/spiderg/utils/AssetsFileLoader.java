@@ -12,15 +12,16 @@ import java.io.InputStream;
 
 
 /**
- *      Loads the JSON file from Assets and raise the appropriate callbacks for the listeners...
+ *   Loads the JSON file from Assets and raise the appropriate callbacks for the listeners...
  */
 public class AssetsFileLoader extends AsyncTask<String, String, String>
 {
     private     Activity            mContext;
     private     IFileLoadedListener fileLoadedListener;
-    private     LoadStatus          loadStatus;
+    private     LoadStatus          loadStatus = LoadStatus.LOAD_FAILURE;
 
-    public enum LoadStatus
+
+    private enum LoadStatus
     {
         LOAD_SUCCESS,
         LOAD_FAILURE
@@ -50,7 +51,6 @@ public class AssetsFileLoader extends AsyncTask<String, String, String>
             input.read(buffer);
             input.close();
 
-            // byte buffer into a string
             String text = new String(buffer);
 
             result = text;
@@ -58,12 +58,10 @@ public class AssetsFileLoader extends AsyncTask<String, String, String>
         }
         catch (IOException e)
         {
-            loadStatus = LoadStatus.LOAD_FAILURE;
             result = e.getMessage();
         }
         catch (Exception e)
         {
-            loadStatus = LoadStatus.LOAD_FAILURE;
             result = e.getMessage();
         }
 
@@ -76,10 +74,9 @@ public class AssetsFileLoader extends AsyncTask<String, String, String>
     {
         super.onPostExecute(result);
 
-        Log.d("JSON", "Response for the Assets File Loader : " + result);
-
         // Raise the appropriate succes/failure callback on the basis of the LoadStatus variable...
-        switch (loadStatus) {
+        switch (loadStatus)
+        {
             case LOAD_SUCCESS:
                 fileLoadedListener.onFileLoadSuccess(result);
                 break;

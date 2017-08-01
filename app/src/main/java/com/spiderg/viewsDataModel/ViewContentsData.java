@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 
 /**
- * Contains the generic views contents including texts, its sizes, color and list of items for spinners & radiobuttons.
+ *    Contains the generic views contents including texts, its sizes, color and list of items for spinners & radiobuttons.
  */
 public class ViewContentsData implements Serializable
 {

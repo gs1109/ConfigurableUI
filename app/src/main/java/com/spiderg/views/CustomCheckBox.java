@@ -5,7 +5,7 @@ import android.graphics.Color;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
 import com.spiderg.configurableui.ConfigurableUIApplication;
@@ -16,23 +16,23 @@ import com.spiderg.viewsDataModel.ViewListData;
 /**
  *      Generates the checkBox on the basis of properties passed...
  */
-public class CustomButton implements ICustomView
+public class CustomCheckBox implements ICustomView
 {
-    Button                      button;
+    CheckBox                    checkBox;
     LinearLayout                parentLayout;
     LinearLayout.LayoutParams   layoutParams;
 
 
 
-    public  CustomButton(ViewListData.ViewData viewData, Context context)
+    public CustomCheckBox(ViewListData.ViewData viewData, Context context)
     {
-        parentLayout = new LinearLayout(context);
-        button       = new Button(context);
+        parentLayout    = new LinearLayout(context);
+        checkBox = new CheckBox(context);
 
         setBasicViewsProperties(viewData);
         setViewsContentProperties(viewData);
 
-        parentLayout.addView(button, layoutParams);
+        parentLayout.addView(checkBox, layoutParams);
     }
 
 
@@ -53,7 +53,7 @@ public class CustomButton implements ICustomView
                 (int)(getViewMargin(viewData).getBottom() * ConfigurableUIApplication.getInstance().SCREEN_DENSITY)
         );
 
-        button.setBackgroundColor(Color.parseColor(viewData.getViewProperties().getBackground()));
+        checkBox.setBackgroundColor(Color.parseColor(viewData.getViewProperties().getBackground()));
 
         switch (viewData.getViewProperties().getAlignment())
         {
@@ -88,10 +88,10 @@ public class CustomButton implements ICustomView
     private void setViewsContentProperties(ViewListData.ViewData viewData)
     {
         // Setting Text properties of the View....
-        button.setText(viewData.getContents().getText());
-        button.setTextSize(TypedValue.COMPLEX_UNIT_SP, viewData.getContents().getSize() * ConfigurableUIApplication.getInstance().SCREEN_DENSITY);
-        button.setTextColor(Color.parseColor(viewData.getContents().getColor()));
-        button.setAllCaps(false);
+        checkBox.setText(viewData.getContents().getText());
+        checkBox.setTextSize(TypedValue.COMPLEX_UNIT_SP, viewData.getContents().getSize() * ConfigurableUIApplication.getInstance().SCREEN_DENSITY);
+        checkBox.setTextColor(Color.parseColor(viewData.getContents().getColor()));
+        checkBox.setAllCaps(false);
 
         // Setting Gravity of the texts...  Only Showing these three alignments....
         switch (viewData.getContents().getGravity())
@@ -119,8 +119,8 @@ public class CustomButton implements ICustomView
                 break;
         }
 
-        button.setHint(viewData.getContents().getHint());
-        button.setPadding(
+        checkBox.setHint(viewData.getContents().getHint());
+        checkBox.setPadding(
                 (int)(viewData.getContents().getPadding().getLeft()   * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),
                 (int)(viewData.getContents().getPadding().getTop()    * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),
                 (int)(viewData.getContents().getPadding().getRight()  * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),

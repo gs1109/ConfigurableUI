@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 
 /**
- *      Model class to hold all the JSON data related to the views...
+ *    Model class to hold all the JSON data related to the views...
  */
 public class ViewListData implements Serializable
 {

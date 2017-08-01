@@ -78,10 +78,10 @@ public class ViewBasicPropertiesData implements Serializable
         public int      right;
 
         @SerializedName("top")
-        public String   top;
+        public int      top;
 
         @SerializedName("bottom")
-        public String   bottom;
+        public int      bottom;
 
 
 
@@ -102,19 +102,19 @@ public class ViewBasicPropertiesData implements Serializable
             this.right = right;
         }
 
-        public String getTop() {
+        public int getTop() {
             return top;
         }
 
-        public void setTop(String top) {
+        public void setTop(int top) {
             this.top = top;
         }
 
-        public String getBottom() {
+        public int getBottom() {
             return bottom;
         }
 
-        public void setBottom(String bottom) {
+        public void setBottom(int bottom) {
             this.bottom = bottom;
         }
     }

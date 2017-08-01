@@ -1,6 +1,11 @@
 <resources>
+
     <string name="app_name">ConfigurableUI</string>
 
+    <!--  SPLASH SCREEN -->
     <string name="file_loading_error">There was some error loading the JSON file.</string>
+
+    <!--  MAIN SCREEN -->
+
 
 </resources>

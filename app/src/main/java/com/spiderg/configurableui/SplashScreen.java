@@ -1,10 +1,12 @@
 package com.spiderg.configurableui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -107,13 +109,13 @@ public class SplashScreen extends Activity
      */
     private void openMainScreen()
     {
-//        mHandler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                Intent intent = new Intent(SplashScreen.this, MainScreen.class);
-//                startActivity(intent);
-//            }
-//        }, SPLASH_TIMEOUT);
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(SplashScreen.this, MainScreen.class);
+                startActivity(intent);
+            }
+        }, SPLASH_TIMEOUT);
     }
 
 

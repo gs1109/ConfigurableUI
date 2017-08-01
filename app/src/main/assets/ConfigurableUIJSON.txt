@@ -4,28 +4,28 @@
 		{
 			"viewType" 		:  "Button",
 			"viewProperties"   :  {
-				"width"	    		:  100,
+				"width"	    		:  200,
 				"height"	   		:  50,
-				"background"	    	:  "#ffffff",
-				"alignment"		:  "CENTER_VERTICAL",
-				"margin" 		:  {
-					"left"			:  10,
-					"right"			:  10,
-					"top"			:  10,
-					"bottom"			:  10
+				"background"	    :  "#f0f0f0",
+				"alignment"		    :  "CENTER_HORIZONTAL",
+				"margin" 		    :  {
+					"left"			    :  10,
+					"right"			    :  10,
+					"top"			    :  10,
+					"bottom"		    :  10
 				}
 			},
 			"contents"           	:  {
 				"text"                 	:  "Click",
-				"size"	    		:  10,
-				"color"  			:  "#3F51B5",
-				"gravity"			:  "CENTER_HORIZONTAL",
-				"hint"			:  "Do Not Click",
-				"padding" 		:  {
-					"left"			:  10,
-					"right"			:  10,
-					"top"			:  10,
-					"bottom"			:  10
+				"size"	    		    :  5,
+				"color"  			    :  "#3F51B5",
+				"gravity"			    :  "CENTER",
+				"hint"			        :  "Do Not Click",
+				"padding" 		        :  {
+					"left"			        :  5,
+					"right"			        :  5,
+					"top"			        :  5,
+					"bottom"			    :  5
 				}
 			}
 		},
@@ -34,26 +34,26 @@
 			"viewProperties"   :  {
 				"width"	    		:  100,
 				"height"	   		:  50,
-				"background"	    	:  "#ffffff",
-				"alignment"		:  "CENTER_VERTICAL",
-				"margin" 		:  {
-					"left"			:  10,
-					"right"			:  10,
-					"top"			:  10,
+				"background"	    :  "#ffffff",
+				"alignment"		    :  "CENTER_VERTICAL",
+				"margin" 		    :  {
+					"left"			    :  10,
+					"right"			    :  10,
+					"top"			    :  10,
 					"bottom"			:  10
 				}
 			},
 			"contents"           	:  {
 				"text"                 	:  "Click",
-				"size"	    		:  10,
-				"color"  			:  "#3F51B5",
-				"gravity"			:  "CENTER",
-				"hint"			:  "Do Not Click",
-				"padding" 		:  {
-					"left"			:  10,
-					"right"			:  10,
-					"top"			:  10,
-					"bottom"			:  10
+				"size"	    		    :  10,
+				"color"  			    :  "#3F51B5",
+				"gravity"			    :  "CENTER",
+				"hint"			        :  "Do Not Click",
+				"padding" 		        :  {
+					"left"			        :  10,
+					"right"			        :  10,
+					"top"			        :  10,
+					"bottom"			    :  10
 				}
 			}
 		},

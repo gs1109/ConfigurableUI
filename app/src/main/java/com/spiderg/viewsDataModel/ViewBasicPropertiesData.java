@@ -25,7 +25,7 @@ public class ViewBasicPropertiesData implements Serializable
 
 
 
-    
+
     public int getWidth() {
         return width;
     }

@@ -1,0 +1,5 @@
+<resources>
+
+    <dimen name="splash_screen_logo_text_size">16sp</dimen>
+
+</resources>

@@ -74,30 +74,31 @@ public class SplashScreen extends Activity
      */
     private void readViewDataJSONFile()
     {
-        AssetsFileLoader cityTask = new AssetsFileLoader(SplashScreen.this,  new IFileLoadedListener() {
-
-            @Override
-            public void onFileLoadSuccess(String response)
-            {
-                try
+        AssetsFileLoader cityTask = new AssetsFileLoader(SplashScreen.this, ConfigurableUIApplication.getInstance().VIEW_JSON_FILE_NAME,
+                new IFileLoadedListener()
                 {
-                    Gson gson = new Gson();
-                    ViewListData.getInstance().inflateViewsData(gson.fromJson(response, ViewListData.class));
-                    // Open the Main screen as data has been inflated to the model class...
-                    openMainScreen();
-                }
-                catch (Exception e)
-                {
-                    showErrorMessage();
-                    e.printStackTrace();
-                }
-            }
+                    @Override
+                    public void onFileLoadSuccess(String response)
+                    {
+                        try
+                        {
+                            Gson gson = new Gson();
+                            ViewListData.getInstance().inflateViewsData(gson.fromJson(response, ViewListData.class));
+                            // Open the Main screen as data has been inflated to the model class...
+                            openMainScreen();
+                        }
+                        catch (Exception e)
+                        {
+                            showErrorMessage();
+                            e.printStackTrace();
+                        }
+                    }
 
-            @Override
-            public void onFileLoadError(String error)
-            {
-                showErrorMessage();
-            }
+                    @Override
+                    public void onFileLoadError(String error)
+                    {
+                        showErrorMessage();
+                    }
         });
 
         cityTask.execute();

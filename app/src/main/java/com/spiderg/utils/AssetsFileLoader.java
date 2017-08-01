@@ -19,7 +19,7 @@ public class AssetsFileLoader extends AsyncTask<String, String, String>
     private     Activity            mContext;
     private     IFileLoadedListener fileLoadedListener;
     private     LoadStatus          loadStatus = LoadStatus.LOAD_FAILURE;
-
+    private     String              fileName;
 
     private enum LoadStatus
     {
@@ -28,10 +28,11 @@ public class AssetsFileLoader extends AsyncTask<String, String, String>
     }
 
 
-    public AssetsFileLoader(Activity mContext, IFileLoadedListener fileLoadedListener)
+    public AssetsFileLoader(Activity mContext, String fileName, IFileLoadedListener fileLoadedListener)
     {
         this.mContext               = mContext;
         this.fileLoadedListener     = fileLoadedListener;
+        this.fileName               = fileName;
     }
 
 
@@ -44,7 +45,7 @@ public class AssetsFileLoader extends AsyncTask<String, String, String>
 
         try
         {
-            input = mContext.getResources().getAssets().open(ConfigurableUIApplication.getInstance().VIEW_JSON_FILE_NAME);
+            input = mContext.getResources().getAssets().open(fileName);
 
             int size = input.available();
             byte[] buffer = new byte[size];

@@ -2,7 +2,7 @@
 	"view_rows" : 
 	[
 		{
-			"viewType" 		:  "Button",
+			"viewType" 		   :  "Button",
 			"viewProperties"   :  {
 				"width"	    		:  200,
 				"height"	   		:  50,
@@ -15,7 +15,7 @@
 					"bottom"		    :  10
 				}
 			},
-			"contents"           	:  {
+			"contents"          :  {
 				"text"                 	:  "Click",
 				"size"	    		    :  5,
 				"color"  			    :  "#3F51B5",
@@ -30,8 +30,8 @@
 			}
 		},
 		{
-			"viewType" 		:  "EditText",
-			"viewProperties"   :  {
+			"viewType" 		    :  "EditText",
+			"viewProperties"    :  {
 				"width"	    		:  250,
 				"height"	   		:  50,
 				"background"	    :  "#A9A9A9",
@@ -43,23 +43,23 @@
 					"bottom"			:  10
 				}
 			},
-			"contents"           	:  {
+			"contents"           :  {
 				"text"                 	:  "",
 				"size"	    		    :  4,
 				"color"  			    :  "#696969",
 				"gravity"			    :  "CENTER",
 				"hint"			        :  "Enter your Name",
 				"padding" 		        :  {
-					"left"			        :  10,
-					"right"			        :  10,
-					"top"			        :  10,
-					"bottom"			    :  10
+					"left"			        :  5,
+                    "right"			        :  5,
+                    "top"			        :  5,
+                    "bottom"			    :  5
 				}
 			}
 		},
 		{
-			"viewType" 		:  "CheckBox",
-			"viewProperties"   :  {
+			"viewType" 		    :  "CheckBox",
+			"viewProperties"    :  {
 				"width"	    		:  300,
 				"height"	   		:  50,
 				"background"	    :  "#00ffffff",
@@ -71,17 +71,17 @@
 					"bottom"			:  10
 				}
 			},
-			"contents"           	:  {
+			"contents"           :  {
 				"text"                 	:  "Agree to Terms and Conditions",
 				"size"	    		    :  4,
 				"color"  			    :  "#3F51B5",
 				"gravity"			    :  "CENTER",
 				"hint"			        :  "Do Not Click",
 				"padding" 		        :  {
-					"left"			        :  10,
-					"right"			        :  10,
-					"top"			        :  10,
-					"bottom"			    :  10
+					"left"			        :  5,
+					"right"			        :  5,
+					"top"			        :  5,
+					"bottom"			    :  5
 				}
 			}
 		},

@@ -27,7 +27,7 @@ public class ViewGeneratorFactory
         }
         else if(isRadioButton(index))
         {
-            return new CustomEditText(getViewDataAtIndex(index), context).getView();
+            return new CustomRadioButton(getViewDataAtIndex(index), context).getView();
         }
         else if(isSpinner(index))
         {

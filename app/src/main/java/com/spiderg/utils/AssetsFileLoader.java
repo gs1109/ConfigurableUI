@@ -2,9 +2,7 @@ package com.spiderg.utils;
 
 import android.app.Activity;
 import android.os.AsyncTask;
-import android.util.Log;
 
-import com.spiderg.configurableui.ConfigurableUIApplication;
 import com.spiderg.listeners.IFileLoadedListener;
 
 import java.io.IOException;

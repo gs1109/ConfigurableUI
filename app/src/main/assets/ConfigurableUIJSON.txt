@@ -45,7 +45,7 @@
 			},
 			"contents"           :  {
 				"text"                 	:  "",
-				"size"	    		    :  4,
+				"size"	    		    :  5,
 				"color"  			    :  "#696969",
 				"gravity"			    :  "CENTER",
 				"hint"			        :  "Enter your Name",
@@ -73,7 +73,7 @@
 			},
 			"contents"           :  {
 				"text"                 	:  "Agree to Terms and Conditions",
-				"size"	    		    :  4,
+				"size"	    		    :  5,
 				"color"  			    :  "#3F51B5",
 				"gravity"			    :  "CENTER",
 				"hint"			        :  "Do Not Click",
@@ -86,72 +86,71 @@
 			}
 		},
 		{
-			"viewType" 		:  "RadioButton",
-			"viewProperties"   :  {
-				"width"	    		:  100,
-				"height"	   		:  50,
-				"background"	    	:  "#ffffff",
-				"alignment"		:  "CENTER",
-				"margin" 		:  {
-					"left"			:  10,
-					"right"			:  10,
-					"top"			:  10,
+			"viewType" 		    :  "RadioButton",
+			"viewProperties"    :  {
+				"width"	    		:  300,
+				"height"	   		:  100,
+				"background"	    :  "#ffffff",
+				"alignment"		    :  "CENTER",
+				"margin" 		    :  {
+					"left"			    :  10,
+					"right"			    :  10,
+					"top"			    :  10,
 					"bottom"			:  10
 				}
 			},
 			"contents"           	:  {
-				"text"                 	:  "Agree to Terms and Conditions",
-				"size"	    		:  10,
-				"color"  			:  "#3F51B5",
-				"gravity"			:  "CENTER",
-				"hint"			:  "Do Not Click",
-				"padding" 		:  {
-					"left"			:  10,
-					"right"			:  10,
-					"top"			:  10,
-					"bottom"			:  10
+				"text"                 	:  "",
+				"size"	    		    :  5,
+				"color"  			    :  "#3F51B5",
+				"gravity"			    :  "CENTER",
+				"hint"			        :  "",
+				"padding" 		        :  {
+					"left"			        :  5,
+					"right"			        :  5,
+					"top"			        :  5,
+					"bottom"			    :  5
 				},
-				"options"			:  [
+				"options"			    :  [
 					"Male",
 					"Female"		
 				]
 			}
 		},
 		{
-			"viewType" 		:  "RadioButton",
-			"viewProperties"   :  {
-				"width"	    		:  100,
-				"height"	   		:  50,
-				"background"	    	:  "#ffffff",
-				"alignment"		:  "CENTER",
-				"margin" 		:  {
-					"left"			:  10,
-					"right"			:  10,
-					"top"			:  10,
-					"bottom"			:  10
-				}
-			},
-			"contents"           	:  {
-				"text"                 	:  "Agree to Terms and Conditions",
-				"size"	    		:  10,
-				"color"  			:  "#3F51B5",
-				"gravity"			:  "CENTER",
-				"hint"			:  "Do Not Click",
-				"padding" 		:  {
-					"left"			:  10,
-					"right"			:  10,
-					"top"			:  10,
-					"bottom"			:  10
-				},
-				"options"			:  [
-					"Delhi",
-					"Bangalore",
-					"Mumbai",
-					"Pune",
-					"Chennai",	
-					"Hyderabad"		
-				]
-			}
+			"viewType" 		    :  "Spinner",
+            "viewProperties"    :  {
+                "width"	    		:  300,
+                "height"	   		:  100,
+                "background"	    :  "#ffffff",
+                "alignment"		    :  "CENTER",
+                "margin" 		    :  {
+                    "left"			    :  10,
+                    "right"			    :  10,
+                    "top"			    :  10,
+                    "bottom"			:  10
+                }
+            },
+            "contents"           	:  {
+                "text"                 	:  "",
+                "size"	    		    :  5,
+                "color"  			    :  "#3F51B5",
+                "gravity"			    :  "CENTER",
+                "hint"			        :  "",
+                "padding" 		        :  {
+                    "left"			        :  5,
+                    "right"			        :  5,
+                    "top"			        :  5,
+                    "bottom"			    :  5
+                },
+                "options"			    :  [
+                    "Delhi",
+                    "Mumbai",
+                    "Pune",
+                    "Bangalore",
+                    "Hyderabad"
+                ]
+            }
 		}
 	]
 }

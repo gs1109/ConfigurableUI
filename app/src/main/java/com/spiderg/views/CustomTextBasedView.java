@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.spiderg.configurableui.ConfigurableUIApplication;
@@ -33,7 +32,7 @@ public class CustomTextBasedView extends CustomView
      */
     protected void setViewsContentProperties(TextView view)
     {
-        // Setting Text properties of the View....
+        // Setting Text properties of the View like text, size and color ....
         view.setText(viewData.getContents().getText());
         view.setTextSize(TypedValue.COMPLEX_UNIT_SP, viewData.getContents().getSize() * ConfigurableUIApplication.getInstance().SCREEN_DENSITY);
         view.setTextColor(Color.parseColor(viewData.getContents().getColor()));
@@ -65,7 +64,10 @@ public class CustomTextBasedView extends CustomView
                 break;
         }
 
+        // Setting hints for the views
         view.setHint(viewData.getContents().getHint());
+
+        // Setting padding for the views content...
         view.setPadding(
                 (int)(getViewPadding().getLeft()   * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),
                 (int)(getViewPadding().getTop()    * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),

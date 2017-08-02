@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.spiderg.configurableui.ConfigurableUIApplication;
 import com.spiderg.viewsUtility.AlignmentType;
@@ -18,15 +19,15 @@ import com.spiderg.viewsDataModel.ViewListData;
 public class DynamicView implements ICustomView
 {
 
-    protected   LinearLayout                parentLayout;
-    protected   LinearLayout.LayoutParams   layoutParams;
+    protected   RelativeLayout                parentLayout;
+    protected   RelativeLayout.LayoutParams   layoutParams;
 
-    private     ViewListData.ViewData       viewData;
+    private     ViewListData.ViewData         viewData;
 
 
     public DynamicView(ViewListData.ViewData viewData, Context context)
     {
-        parentLayout    = new LinearLayout(context);
+        parentLayout    = new RelativeLayout(context);
         this.viewData   = viewData;
     }
 
@@ -36,10 +37,8 @@ public class DynamicView implements ICustomView
     */
     protected void setBasicViewsProperties(View view)
     {
-        // Setting Contents of the View....
-        parentLayout.setOrientation(LinearLayout.VERTICAL);
         // Set height and width of the layout
-        layoutParams = new LinearLayout.LayoutParams(
+        layoutParams = new RelativeLayout.LayoutParams(
                 (int)(viewData.getViewProperties().getWidth() * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),
                 (int)(viewData.getViewProperties().getHeight() *  ConfigurableUIApplication.getInstance().SCREEN_DENSITY));
 
@@ -54,29 +53,38 @@ public class DynamicView implements ICustomView
         // Set the background color of the view
         view.setBackgroundColor(Color.parseColor(viewData.getViewProperties().getBackground()));
 
+        setLayoutGravity();
+    }
+
+
+    /*
+     *   Setting layout gravity of the view...
+     */
+    protected void setLayoutGravity()
+    {
         // Set alignment for the views.....
         switch (viewData.getViewProperties().getAlignment())
         {
             case AlignmentType.CENTER:
-                layoutParams.gravity = Gravity.BOTTOM;
+                layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
                 break;
             case AlignmentType.CENTER_HORIZONTAL:
-                layoutParams.gravity = Gravity.CENTER_HORIZONTAL;
+                layoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
                 break;
             case AlignmentType.CENTER_VERTICAL:
-                layoutParams.gravity = Gravity.CENTER_VERTICAL;
+                layoutParams.addRule(RelativeLayout.CENTER_VERTICAL);
                 break;
             case AlignmentType.START:
-                layoutParams.gravity = Gravity.START;
+                layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
                 break;
             case AlignmentType.END:
-                layoutParams.gravity = Gravity.END;
+                layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
                 break;
             case AlignmentType.TOP:
-                layoutParams.gravity = Gravity.TOP;
+                layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
                 break;
             case AlignmentType.BOTTOM:
-                layoutParams.gravity = Gravity.BOTTOM;
+                layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
                 break;
         }
     }

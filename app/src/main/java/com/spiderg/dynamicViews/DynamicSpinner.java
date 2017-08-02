@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import com.spiderg.viewsDataModel.ViewListData;
 
 
@@ -25,7 +24,7 @@ public class DynamicSpinner extends DynamicTextBasedView
         spinner   = new Spinner(context);
 
         setBasicViewsProperties(spinner);
-        setDropdownItems(viewData);
+        setDropdownAdapter(viewData);
 
         parentLayout.addView(spinner, layoutParams);
     }
@@ -34,12 +33,11 @@ public class DynamicSpinner extends DynamicTextBasedView
     /*
     *  Populated the dropdown items based on the options available in the JSON..
     */
-    private void setDropdownItems(ViewListData.ViewData  viewData)
+    private void setDropdownAdapter(final ViewListData.ViewData  viewData)
     {
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_dropdown_item_1line, viewData.getContents().getOptions());
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_dropdown_item_1line, viewData.getContents().getOptions());
 
-        adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-        spinner.setAdapter(adapter);
+        spinner.setAdapter(spinnerAdapter);
     }
 
 
@@ -48,4 +46,5 @@ public class DynamicSpinner extends DynamicTextBasedView
     {
         return parentLayout;
     }
+
 }

@@ -2,9 +2,13 @@ package com.spiderg.configurableui;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.spiderg.viewsDataModel.ViewListData;
+import com.spiderg.viewsUtility.AlignmentType;
 import com.spiderg.viewsUtility.ViewGeneratorFactory;
 
 
@@ -41,12 +45,69 @@ public class MainScreen extends Activity
      */
     private void generateViews()
     {
-        View childView = ViewGeneratorFactory.getDynamicView(4, MainScreen.this);
-
-        if(childView != null)
+        for(int i=0; i<ViewListData.getInstance().getView_Rows().size(); i++ )
         {
-            parentView.addView(childView);
+            View childView = ViewGeneratorFactory.getDynamicView(i, MainScreen.this);
+
+            if(childView != null)
+            {
+                childView.setId(i);
+
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                        RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+                if (i > 0)
+                {
+                    params.addRule(RelativeLayout.BELOW, i - 1);
+                }
+
+                alignViews(getViewAlignment(i), params);
+                childView.setLayoutParams(params);
+
+                parentView.addView(childView);
+            }
         }
     }
+
+
+    /*
+     *   Align the views on the basis of layout_gravity value in the JSON...
+     */
+    private void alignViews(String gravity, RelativeLayout.LayoutParams params)
+    {
+        switch (gravity)
+        {
+            case AlignmentType.CENTER:
+                params.addRule(RelativeLayout.CENTER_IN_PARENT);
+                break;
+            case AlignmentType.CENTER_HORIZONTAL:
+                params.addRule(RelativeLayout.CENTER_HORIZONTAL);
+                break;
+            case AlignmentType.CENTER_VERTICAL:
+                params.addRule(RelativeLayout.CENTER_VERTICAL);
+                break;
+            case AlignmentType.START:
+            case AlignmentType.LEFT:
+                params.addRule(RelativeLayout.ALIGN_PARENT_START);
+                break;
+            case AlignmentType.END:
+            case AlignmentType.RIGHT:
+                params.addRule(RelativeLayout.ALIGN_PARENT_END);
+                break;
+            case AlignmentType.TOP:
+                params.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+                break;
+            case AlignmentType.BOTTOM:
+                params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+                break;
+        }
+    }
+
+
+    private String getViewAlignment(int i)
+    {
+        return ViewListData.getInstance().getView_Rows().get(i).getViewProperties().getAlignment();
+    }
+
+
 
 }

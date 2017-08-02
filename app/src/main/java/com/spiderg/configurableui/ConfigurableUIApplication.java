@@ -2,9 +2,6 @@ package com.spiderg.configurableui;
 
 import android.app.Application;
 
-/**
- * Created by Gaurav on 01/08/17.
- */
 
 public class ConfigurableUIApplication extends Application
 {
@@ -33,7 +30,5 @@ public class ConfigurableUIApplication extends Application
     public void onCreate()
     {
         super.onCreate();
-
-
     }
 }

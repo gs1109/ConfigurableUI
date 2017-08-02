@@ -30,6 +30,34 @@
 			}
 		},
 		{
+            "viewType" 		   :  "Button",
+            "viewProperties"   :  {
+                "width"	    		:  200,
+                "height"	   		:  50,
+                "background"	    :  "#00ff00",
+                "alignment"		    :  "CENTER_HORIZONTAL",
+                "margin" 		    :  {
+                    "left"			    :  10,
+                    "right"			    :  10,
+                    "top"			    :  10,
+                    "bottom"		    :  10
+                }
+            },
+            "contents"          :  {
+                "text"                 	:  "Do Not Click",
+                "size"	    		    :  5,
+                "color"  			    :  "#ff0000",
+                "gravity"			    :  "LEFT",
+                "hint"			        :  "Do Not Click",
+                "padding" 		        :  {
+                    "left"			        :  15,
+                    "right"			        :  5,
+                    "top"			        :  5,
+                    "bottom"			    :  5
+                }
+            }
+        },
+		{
 			"viewType" 		    :  "EditText",
 			"viewProperties"    :  {
 				"width"	    		:  250,
@@ -37,7 +65,7 @@
 				"background"	    :  "#A9A9A9",
 				"alignment"		    :  "CENTER_VERTICAL",
 				"margin" 		    :  {
-					"left"			    :  10,
+					"left"			    :  5,
 					"right"			    :  10,
 					"top"			    :  10,
 					"bottom"			:  10
@@ -45,14 +73,14 @@
 			},
 			"contents"           :  {
 				"text"                 	:  "",
-				"size"	    		    :  5,
+				"size"	    		    :  4,
 				"color"  			    :  "#696969",
-				"gravity"			    :  "CENTER",
+				"gravity"			    :  "RIGHT",
 				"hint"			        :  "Enter your Name",
 				"padding" 		        :  {
 					"left"			        :  5,
                     "right"			        :  5,
-                    "top"			        :  5,
+                    "top"			        :  15,
                     "bottom"			    :  5
 				}
 			}
@@ -75,7 +103,7 @@
 				"text"                 	:  "Agree to Terms and Conditions",
 				"size"	    		    :  5,
 				"color"  			    :  "#3F51B5",
-				"gravity"			    :  "CENTER",
+				"gravity"			    :  "CENTER_VERTICAL",
 				"hint"			        :  "Do Not Click",
 				"padding" 		        :  {
 					"left"			        :  5,
@@ -90,8 +118,8 @@
 			"viewProperties"    :  {
 				"width"	    		:  300,
 				"height"	   		:  100,
-				"background"	    :  "#ffffff",
-				"alignment"		    :  "CENTER",
+				"background"	    :  "#f0f0f0",
+				"alignment"		    :  "END",
 				"margin" 		    :  {
 					"left"			    :  10,
 					"right"			    :  10,
@@ -101,9 +129,9 @@
 			},
 			"contents"           	:  {
 				"text"                 	:  "",
-				"size"	    		    :  5,
-				"color"  			    :  "#3F51B5",
-				"gravity"			    :  "CENTER",
+				"size"	    		    :  8,
+				"color"  			    :  "#ff0000",
+				"gravity"			    :  "CENTER_VERTICAL",
 				"hint"			        :  "",
 				"padding" 		        :  {
 					"left"			        :  5,
@@ -120,7 +148,7 @@
 		{
 			"viewType" 		    :  "Spinner",
             "viewProperties"    :  {
-                "width"	    		:  300,
+                "width"	    		:  320,
                 "height"	   		:  50,
                 "background"	    :  "#ffffff",
                 "alignment"		    :  "CENTER",

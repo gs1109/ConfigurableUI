@@ -39,31 +39,7 @@ public class DynamicTextBasedView extends DynamicView
         view.setTextColor(Color.parseColor(viewData.getContents().getColor()));
         view.setAllCaps(false);
 
-        // Setting Gravity of the texts...  Only Showing these three alignments....
-        switch (viewData.getContents().getGravity())
-        {
-            case AlignmentType.CENTER:
-                layoutParams.gravity = Gravity.BOTTOM;
-                break;
-            case AlignmentType.CENTER_HORIZONTAL:
-                layoutParams.gravity = Gravity.CENTER_HORIZONTAL;
-                break;
-            case AlignmentType.CENTER_VERTICAL:
-                layoutParams.gravity = Gravity.CENTER_VERTICAL;
-                break;
-            case AlignmentType.START:
-                layoutParams.gravity = Gravity.START;
-                break;
-            case AlignmentType.END:
-                layoutParams.gravity = Gravity.END;
-                break;
-            case AlignmentType.TOP:
-                layoutParams.gravity = Gravity.TOP;
-                break;
-            case AlignmentType.BOTTOM:
-                layoutParams.gravity = Gravity.BOTTOM;
-                break;
-        }
+        setGravity(view);
 
         // Setting hints for the views
         view.setHint(viewData.getContents().getHint());
@@ -75,6 +51,38 @@ public class DynamicTextBasedView extends DynamicView
                 (int)(getViewPadding().getRight()  * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),
                 (int)(getViewPadding().getBottom() * ConfigurableUIApplication.getInstance().SCREEN_DENSITY)
         );
+    }
+
+
+    protected void setGravity(TextView view)
+    {
+        // Setting Gravity of the texts...  Only Showing these three alignments....
+        switch (viewData.getContents().getGravity())
+        {
+            case AlignmentType.CENTER:
+                view.setGravity(Gravity.CENTER);
+                break;
+            case AlignmentType.CENTER_HORIZONTAL:
+                view.setGravity(Gravity.CENTER_HORIZONTAL);
+                break;
+            case AlignmentType.CENTER_VERTICAL:
+                view.setGravity(Gravity.CENTER_VERTICAL);
+                break;
+            case AlignmentType.START:
+            case AlignmentType.LEFT:
+                view.setGravity(Gravity.START);
+                break;
+            case AlignmentType.END:
+            case AlignmentType.RIGHT:
+                view.setGravity(Gravity.END);
+                break;
+            case AlignmentType.TOP:
+                view.setGravity(Gravity.TOP);
+                break;
+            case AlignmentType.BOTTOM:
+                view.setGravity(Gravity.BOTTOM);
+                break;
+        }
     }
 
 

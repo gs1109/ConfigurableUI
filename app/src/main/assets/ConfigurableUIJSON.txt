@@ -73,7 +73,7 @@
 			},
 			"contents"           :  {
 				"text"                 	:  "",
-				"size"	    		    :  4,
+				"size"	    		    :  5,
 				"color"  			    :  "#696969",
 				"gravity"			    :  "RIGHT",
 				"hint"			        :  "Enter your Name",

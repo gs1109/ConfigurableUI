@@ -121,7 +121,7 @@
 			"viewType" 		    :  "Spinner",
             "viewProperties"    :  {
                 "width"	    		:  300,
-                "height"	   		:  100,
+                "height"	   		:  50,
                 "background"	    :  "#ffffff",
                 "alignment"		    :  "CENTER",
                 "margin" 		    :  {

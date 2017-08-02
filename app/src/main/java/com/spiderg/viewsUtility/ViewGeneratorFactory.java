@@ -7,6 +7,7 @@ import com.spiderg.dynamicViews.DynamicButton;
 import com.spiderg.dynamicViews.DynamicCheckBox;
 import com.spiderg.dynamicViews.DynamicEditText;
 import com.spiderg.dynamicViews.DynamicRadioButton;
+import com.spiderg.dynamicViews.DynamicSpinner;
 import com.spiderg.viewsDataModel.ViewListData;
 
 /**
@@ -35,7 +36,7 @@ public class ViewGeneratorFactory
         }
         else if(isSpinner(index))
         {
-            return new DynamicEditText(getViewDataAtIndex(index), context).getView();
+            return new DynamicSpinner(getViewDataAtIndex(index), context).getView();
         }
 
         // Incompatible View Type

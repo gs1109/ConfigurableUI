@@ -1,28 +1,24 @@
-package com.spiderg.views;
+package com.spiderg.dynamicViews;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.util.TypedValue;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.spiderg.configurableui.ConfigurableUIApplication;
 import com.spiderg.viewsDataModel.ViewListData;
 
 
 /**
  *      Generates the button on the basis of properties passed...
  */
-public class CustomRadioButton extends CustomTextBasedView
+public class DynamicRadioButton extends DynamicTextBasedView
 {
     private RadioButton radioButton;
     private RadioGroup  radioGroup;
     private Context     mContext;
 
 
-    public CustomRadioButton(ViewListData.ViewData viewData, Context context)
+    public DynamicRadioButton(ViewListData.ViewData viewData, Context context)
     {
         super(viewData, context);
 

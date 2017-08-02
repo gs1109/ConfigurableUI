@@ -1,4 +1,4 @@
-package com.spiderg.views;
+package com.spiderg.dynamicViews;
 
 import android.content.Context;
 import android.view.View;
@@ -10,13 +10,13 @@ import com.spiderg.viewsDataModel.ViewListData;
 /**
  *      Generates the editText on the basis of properties passed...
  */
-public class CustomEditText extends CustomTextBasedView
+public class DynamicEditText extends DynamicTextBasedView
 {
 
     private EditText editText;
 
 
-    public CustomEditText(ViewListData.ViewData viewData, Context context)
+    public DynamicEditText(ViewListData.ViewData viewData, Context context)
     {
         super(viewData, context);
 

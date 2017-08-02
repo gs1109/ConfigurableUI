@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import com.spiderg.views.ViewGeneratorFactory;
+import com.spiderg.viewsUtility.ViewGeneratorFactory;
 
 
 /*

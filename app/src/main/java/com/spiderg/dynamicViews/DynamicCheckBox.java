@@ -1,4 +1,4 @@
-package com.spiderg.views;
+package com.spiderg.dynamicViews;
 
 import android.content.Context;
 import android.view.View;
@@ -10,12 +10,12 @@ import com.spiderg.viewsDataModel.ViewListData;
 /**
  *      Generates the checkBox on the basis of properties passed...
  */
-public class CustomCheckBox extends CustomTextBasedView
+public class DynamicCheckBox extends DynamicTextBasedView
 {
     private CheckBox checkBox;
 
 
-    public  CustomCheckBox(ViewListData.ViewData viewData, Context context)
+    public DynamicCheckBox(ViewListData.ViewData viewData, Context context)
     {
         super(viewData, context);
 

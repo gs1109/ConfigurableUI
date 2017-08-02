@@ -1,4 +1,4 @@
-package com.spiderg.views;
+package com.spiderg.dynamicViews;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -7,13 +7,15 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.spiderg.configurableui.ConfigurableUIApplication;
+import com.spiderg.viewsUtility.AlignmentType;
+import com.spiderg.viewsUtility.ICustomView;
 import com.spiderg.viewsDataModel.ViewBasicPropertiesData;
 import com.spiderg.viewsDataModel.ViewListData;
 
 /**
  *   Base class for the views needs to be generated dynamically...
  */
-public class CustomView implements ICustomView
+public class DynamicView implements ICustomView
 {
 
     protected   LinearLayout                parentLayout;
@@ -22,7 +24,7 @@ public class CustomView implements ICustomView
     private     ViewListData.ViewData       viewData;
 
 
-    public  CustomView(ViewListData.ViewData viewData, Context context)
+    public DynamicView(ViewListData.ViewData viewData, Context context)
     {
         parentLayout    = new LinearLayout(context);
         this.viewData   = viewData;

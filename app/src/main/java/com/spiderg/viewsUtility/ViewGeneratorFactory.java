@@ -1,8 +1,12 @@
-package com.spiderg.views;
+package com.spiderg.viewsUtility;
 
 import android.content.Context;
 import android.view.View;
 
+import com.spiderg.dynamicViews.DynamicButton;
+import com.spiderg.dynamicViews.DynamicCheckBox;
+import com.spiderg.dynamicViews.DynamicEditText;
+import com.spiderg.dynamicViews.DynamicRadioButton;
 import com.spiderg.viewsDataModel.ViewListData;
 
 /**
@@ -15,23 +19,23 @@ public class ViewGeneratorFactory
     {
         if(isButton(index))
         {
-            return new CustomButton(getViewDataAtIndex(index), context).getView();
+            return new DynamicButton(getViewDataAtIndex(index), context).getView();
         }
         else if(isEditText(index))
         {
-            return new CustomEditText(getViewDataAtIndex(index), context).getView();
+            return new DynamicEditText(getViewDataAtIndex(index), context).getView();
         }
         else if(isCheckBox(index))
         {
-            return new CustomCheckBox(getViewDataAtIndex(index), context).getView();
+            return new DynamicCheckBox(getViewDataAtIndex(index), context).getView();
         }
         else if(isRadioButton(index))
         {
-            return new CustomRadioButton(getViewDataAtIndex(index), context).getView();
+            return new DynamicRadioButton(getViewDataAtIndex(index), context).getView();
         }
         else if(isSpinner(index))
         {
-            return new CustomEditText(getViewDataAtIndex(index), context).getView();
+            return new DynamicEditText(getViewDataAtIndex(index), context).getView();
         }
 
         // Incompatible View Type

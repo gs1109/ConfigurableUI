@@ -1,4 +1,4 @@
-package com.spiderg.views;
+package com.spiderg.dynamicViews;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -8,18 +8,19 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.spiderg.configurableui.ConfigurableUIApplication;
+import com.spiderg.viewsUtility.AlignmentType;
 import com.spiderg.viewsDataModel.ViewBasicPropertiesData;
 import com.spiderg.viewsDataModel.ViewListData;
 
 /**
  *   Base class for the views needs to be generated dynamically...
  */
-public class CustomTextBasedView extends CustomView
+public class DynamicTextBasedView extends DynamicView
 {
     private     ViewListData.ViewData       viewData;
 
 
-    public CustomTextBasedView(ViewListData.ViewData viewData, Context context)
+    public DynamicTextBasedView(ViewListData.ViewData viewData, Context context)
     {
         super(viewData, context);
 

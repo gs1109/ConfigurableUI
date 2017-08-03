@@ -12,14 +12,14 @@ import com.spiderg.viewsDataModel.ViewListData;
  */
 public class DynamicButton extends DynamicTextBasedView
 {
-    private Button   button;
+    private Button  button;
 
 
     public DynamicButton(ViewListData.ViewData viewData, Context context)
     {
         super(viewData, context);
 
-        button       = new Button(context);
+        button = new Button(context);
 
         setBasicViewsProperties(button);
         setViewsContentProperties(button);

@@ -49,7 +49,7 @@ public class MainScreen extends Activity
 
 
     /*
-     *
+     *     Sets up appropriate scrollview based on orientation value from JSON...
      */
     private void setOrientation()
     {
@@ -58,16 +58,19 @@ public class MainScreen extends Activity
             scrollView = new HorizontalScrollView(this);
             scrollViewChild = new LinearLayout(this);
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                    RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+                    RelativeLayout.LayoutParams.MATCH_PARENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT);
             scrollView.setLayoutParams(params);
 
         }
-        else if(OrientationType.VERTICAL.equalsIgnoreCase(ViewListData.getInstance().orientation))
+        else
         {
             scrollView = new ScrollView(this);
             scrollViewChild = new RelativeLayout(this);
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                    RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
+                    RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT);
+            scrollViewChild.setLayoutParams(params);
             scrollView.setLayoutParams(params);
         }
         parentView.addView(scrollView);
@@ -89,17 +92,15 @@ public class MainScreen extends Activity
                 childView.setId(i);
 
                 RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                        RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-                if (i > 0)
+                        RelativeLayout.LayoutParams.WRAP_CONTENT,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+                if(i > 0)
                 {
-//                    if(scrollView instanceof  HorizontalScrollView)
-//                    {
-//                        params.addRule(RelativeLayout.END_OF, i - 1);
-//                    }
-                    if(scrollView instanceof ScrollView)
-                    {
-                        params.addRule(RelativeLayout.BELOW, i - 1);
-                    }
+                   if(scrollView instanceof ScrollView)
+                   {
+                       params.addRule(RelativeLayout.BELOW, i - 1);
+                   }
                 }
 
                 alignViews(getViewAlignment(i), params);
@@ -120,13 +121,9 @@ public class MainScreen extends Activity
         switch (gravity)
         {
             case AlignmentType.CENTER:
-                params.addRule(RelativeLayout.CENTER_IN_PARENT);
-                break;
             case AlignmentType.CENTER_HORIZONTAL:
-                params.addRule(RelativeLayout.CENTER_HORIZONTAL);
-                break;
             case AlignmentType.CENTER_VERTICAL:
-                params.addRule(RelativeLayout.CENTER_VERTICAL);
+                params.addRule(RelativeLayout.CENTER_HORIZONTAL);
                 break;
             case AlignmentType.START:
             case AlignmentType.LEFT:
@@ -135,12 +132,6 @@ public class MainScreen extends Activity
             case AlignmentType.END:
             case AlignmentType.RIGHT:
                 params.addRule(RelativeLayout.ALIGN_PARENT_END);
-                break;
-            case AlignmentType.TOP:
-                params.addRule(RelativeLayout.ALIGN_PARENT_TOP);
-                break;
-            case AlignmentType.BOTTOM:
-                params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
                 break;
         }
     }

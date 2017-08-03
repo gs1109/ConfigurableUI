@@ -17,6 +17,7 @@ import com.spiderg.viewsDataModel.ViewListData;
  */
 public class DynamicTextBasedView extends DynamicView
 {
+
     private     ViewListData.ViewData       viewData;
 
 
@@ -35,7 +36,8 @@ public class DynamicTextBasedView extends DynamicView
     {
         // Setting Text properties of the View like text, size and color ....
         view.setText(viewData.getContents().getText());
-        view.setTextSize(TypedValue.COMPLEX_UNIT_SP, viewData.getContents().getSize() * ConfigurableUIApplication.getInstance().SCREEN_DENSITY);
+        view.setTextSize(TypedValue.COMPLEX_UNIT_SP, viewData.getContents().getSize()
+                                                * getApplicationInstance().SCREEN_DENSITY);
         view.setTextColor(Color.parseColor(viewData.getContents().getColor()));
         view.setAllCaps(false);
 
@@ -46,10 +48,10 @@ public class DynamicTextBasedView extends DynamicView
 
         // Setting padding for the views content...
         view.setPadding(
-                (int)(getViewPadding().getLeft()   * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),
-                (int)(getViewPadding().getTop()    * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),
-                (int)(getViewPadding().getRight()  * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),
-                (int)(getViewPadding().getBottom() * ConfigurableUIApplication.getInstance().SCREEN_DENSITY)
+                (int)(getViewPadding().getLeft()   * getApplicationInstance().SCREEN_DENSITY),
+                (int)(getViewPadding().getTop()    * getApplicationInstance().SCREEN_DENSITY),
+                (int)(getViewPadding().getRight()  * getApplicationInstance().SCREEN_DENSITY),
+                (int)(getViewPadding().getBottom() * getApplicationInstance().SCREEN_DENSITY)
         );
     }
 

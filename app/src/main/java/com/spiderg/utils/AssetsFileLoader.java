@@ -26,7 +26,8 @@ public class AssetsFileLoader extends AsyncTask<String, String, String>
     }
 
 
-    public AssetsFileLoader(Activity mContext, String fileName, IFileLoadedListener fileLoadedListener)
+    public AssetsFileLoader(Activity mContext, String fileName,
+                            IFileLoadedListener fileLoadedListener)
     {
         this.mContext               = mContext;
         this.fileLoadedListener     = fileLoadedListener;

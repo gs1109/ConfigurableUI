@@ -4,8 +4,6 @@
 
     <!--  SPLASH SCREEN -->
     <string name="file_loading_error">There was some error loading the JSON file.</string>
-
-    <!--  MAIN SCREEN -->
-
+    <string name="invalid_json">Not a valid JSON format.</string>
 
 </resources>

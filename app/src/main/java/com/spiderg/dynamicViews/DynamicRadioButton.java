@@ -16,7 +16,6 @@ import com.spiderg.viewsUtility.AlignmentType;
  */
 public class DynamicRadioButton extends DynamicTextBasedView
 {
-    private RadioButton radioButton;
     private RadioGroup  radioGroup;
     private Context     mContext;
 
@@ -39,21 +38,23 @@ public class DynamicRadioButton extends DynamicTextBasedView
     {
         for(int i=0; i<viewData.getContents().getOptions().size(); i++)
         {
-            createRadioButton(viewData, i);
+            radioGroup.addView(createRadioButton(viewData, i));
         }
+
+        setGravity(radioGroup, viewData);
     }
 
 
     /*
      *  Create Radio Buttons based on the text passed.
      */
-    private void createRadioButton(ViewListData.ViewData viewData, int index)
+    private RadioButton createRadioButton(ViewListData.ViewData viewData, int index)
     {
         RadioButton radioButton = new RadioButton(mContext);
         setViewsContentProperties(radioButton);
         radioButton.setText(viewData.getContents().getOptions().get(index));
-        radioGroup.addView(radioButton);
-        setGravity(radioGroup, viewData);
+
+        return radioButton;
     }
 
 
@@ -62,7 +63,6 @@ public class DynamicRadioButton extends DynamicTextBasedView
      */
     protected void setGravity(RadioGroup view, ViewListData.ViewData viewData)
     {
-        // Setting Gravity of the texts...  Only Showing these three alignments....
         switch (viewData.getContents().getGravity())
         {
             case AlignmentType.CENTER:

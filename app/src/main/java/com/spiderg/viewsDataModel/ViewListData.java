@@ -34,7 +34,7 @@ public class ViewListData implements Serializable
     @SerializedName("orientation")
     public String orientation;
 
-    @SerializedName("view_rows")
+    @SerializedName("views")
     public ArrayList<ViewData> view_rows = new ArrayList<ViewData>();
 
 

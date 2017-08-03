@@ -14,7 +14,7 @@ import com.spiderg.viewsDataModel.ViewBasicPropertiesData;
 import com.spiderg.viewsDataModel.ViewListData;
 
 /**
- *   Base class for the views needs to be generated dynamically...
+ *   Base class for the views which needs to be generated dynamically...
  */
 public class DynamicView implements ICustomView
 {
@@ -39,19 +39,19 @@ public class DynamicView implements ICustomView
     {
         // Set height and width of the layout
         layoutParams = new RelativeLayout.LayoutParams(
-                (int)(viewData.getViewProperties().getWidth() * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),
-                (int)(viewData.getViewProperties().getHeight() *  ConfigurableUIApplication.getInstance().SCREEN_DENSITY));
+                (int)(getViewProperties().getWidth()  * getApplicationInstance().SCREEN_DENSITY),
+                (int)(getViewProperties().getHeight() * getApplicationInstance().SCREEN_DENSITY));
 
         // Set margins for the views...
         layoutParams.setMargins(
-                (int)(getViewMargin(viewData).getLeft()   * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),
-                (int)(getViewMargin(viewData).getTop()    * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),
-                (int)(getViewMargin(viewData).getRight()  * ConfigurableUIApplication.getInstance().SCREEN_DENSITY),
-                (int)(getViewMargin(viewData).getBottom() * ConfigurableUIApplication.getInstance().SCREEN_DENSITY)
+                (int)(getViewMargin(viewData).getLeft()  * getApplicationInstance().SCREEN_DENSITY),
+                (int)(getViewMargin(viewData).getTop()   * getApplicationInstance().SCREEN_DENSITY),
+                (int)(getViewMargin(viewData).getRight() * getApplicationInstance().SCREEN_DENSITY),
+                (int)(getViewMargin(viewData).getBottom()* getApplicationInstance().SCREEN_DENSITY)
         );
 
         // Set the background color of the view
-        view.setBackgroundColor(Color.parseColor(viewData.getViewProperties().getBackground()));
+        view.setBackgroundColor(Color.parseColor(getViewProperties().getBackground()));
 
         setLayoutGravity();
     }
@@ -63,7 +63,7 @@ public class DynamicView implements ICustomView
     protected void setLayoutGravity()
     {
         // Set alignment for the views.....
-        switch (viewData.getViewProperties().getAlignment())
+        switch (getViewProperties().getAlignment())
         {
             case AlignmentType.CENTER:
                 layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
@@ -74,17 +74,13 @@ public class DynamicView implements ICustomView
             case AlignmentType.CENTER_VERTICAL:
                 layoutParams.addRule(RelativeLayout.CENTER_VERTICAL);
                 break;
+            case AlignmentType.LEFT:
             case AlignmentType.START:
-                layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
+                layoutParams.addRule(RelativeLayout.ALIGN_START);
                 break;
+            case AlignmentType.RIGHT:
             case AlignmentType.END:
-                layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
-                break;
-            case AlignmentType.TOP:
-                layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
-                break;
-            case AlignmentType.BOTTOM:
-                layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
+                layoutParams.addRule(RelativeLayout.ALIGN_END);
                 break;
         }
     }
@@ -97,8 +93,20 @@ public class DynamicView implements ICustomView
     }
 
 
-    protected ViewBasicPropertiesData.Margin getViewMargin(ViewListData.ViewData viewData)
+    protected ConfigurableUIApplication getApplicationInstance()
     {
-        return viewData.getViewProperties().getMargin();
+        return ConfigurableUIApplication.getInstance();
+    }
+
+
+    private ViewBasicPropertiesData getViewProperties()
+    {
+        return viewData.getViewProperties();
+    }
+
+
+    private ViewBasicPropertiesData.Margin getViewMargin(ViewListData.ViewData viewData)
+    {
+        return getViewProperties().getMargin();
     }
 }

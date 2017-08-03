@@ -10,6 +10,8 @@ import com.spiderg.dynamicViews.DynamicRadioButton;
 import com.spiderg.dynamicViews.DynamicSpinner;
 import com.spiderg.viewsDataModel.ViewListData;
 
+import static com.spiderg.viewsUtility.ViewType.*;
+
 /**
  *   Factory class which generates the View on the basis of the view_type parameter in the JSON...
  */
@@ -52,31 +54,31 @@ public class ViewGeneratorFactory
 
     private static boolean isEditText(int index)
     {
-        return ViewType.EDITTEXT.equalsIgnoreCase(getViewDataAtIndex(index).getViewType());
+        return EDITTEXT.equalsIgnoreCase(getViewDataAtIndex(index).getViewType());
     }
 
 
     private static boolean isButton(int index)
     {
-        return ViewType.BUTTON.equalsIgnoreCase(getViewDataAtIndex(index).getViewType());
+        return BUTTON.equalsIgnoreCase(getViewDataAtIndex(index).getViewType());
     }
 
 
     private static boolean isRadioButton(int index)
     {
-        return ViewType.RADIO_BUTTON.equalsIgnoreCase(getViewDataAtIndex(index).getViewType());
+        return RADIO_BUTTON.equalsIgnoreCase(getViewDataAtIndex(index).getViewType());
     }
 
 
     private static boolean isCheckBox(int index)
     {
-        return ViewType.CHECKBOX.equalsIgnoreCase(getViewDataAtIndex(index).getViewType());
+        return CHECKBOX.equalsIgnoreCase(getViewDataAtIndex(index).getViewType());
     }
 
 
     private static boolean isSpinner(int index)
     {
-        return ViewType.SPINNER.equalsIgnoreCase(getViewDataAtIndex(index).getViewType());
+        return SPINNER.equalsIgnoreCase(getViewDataAtIndex(index).getViewType());
     }
 
 }

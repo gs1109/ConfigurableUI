@@ -24,7 +24,8 @@
 
         <activity
             android:name="com.spiderg.configurableui.MainScreen"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
 
 
     </application>

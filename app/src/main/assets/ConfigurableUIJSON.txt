@@ -1,35 +1,40 @@
 {
     "orientation"          :  "VERTICAL",
-	"view_rows" : 
+	"views" :
 	[
-		{
-			"viewType" 		   :  "Button",
-			"viewProperties"   :  {
-				"width"	    		:  200,
-				"height"	   		:  50,
-				"background"	    :  "#f0f0f0",
-				"alignment"		    :  "CENTER_HORIZONTAL",
-				"margin" 		    :  {
-					"left"			    :  10,
-					"right"			    :  10,
-					"top"			    :  10,
-					"bottom"		    :  10
-				}
-			},
-			"contents"          :  {
-				"text"                 	:  "Click",
-				"size"	    		    :  5,
-				"color"  			    :  "#3F51B5",
-				"gravity"			    :  "CENTER",
-				"hint"			        :  "Do Not Click",
-				"padding" 		        :  {
-					"left"			        :  5,
-					"right"			        :  5,
-					"top"			        :  5,
-					"bottom"			    :  5
-				}
-			}
-		},
+        {
+            "viewType" 		    :  "RadioButton",
+            "viewProperties"    :  {
+                "width"	    		:  300,
+                "height"	   		:  200,
+                "background"	    :  "#f0f0f0",
+                "alignment"		    :  "CENTER",
+                "margin" 		    :  {
+                    "left"			    :  10,
+                    "right"			    :  10,
+                    "top"			    :  10,
+                    "bottom"			:  10
+                }
+            },
+            "contents"           	:  {
+                "text"                 	:  "",
+                "size"	    		    :  8,
+                "color"  			    :  "#ff0000",
+                "gravity"			    :  "CENTER_VERTICAL",
+                "hint"			        :  "",
+                "padding" 		        :  {
+                    "left"			        :  5,
+                    "right"			        :  5,
+                    "top"			        :  5,
+                    "bottom"			    :  5
+                },
+                "options"			    :  [
+                    "Beginner",
+                    "Intermediate",
+                    "Expert"
+                ]
+            }
+        },
 		{
             "viewType" 		   :  "Button",
             "viewProperties"   :  {
@@ -64,7 +69,7 @@
 				"width"	    		:  250,
 				"height"	   		:  50,
 				"background"	    :  "#A9A9A9",
-				"alignment"		    :  "CENTER_VERTICAL",
+				"alignment"		    :  "START",
 				"margin" 		    :  {
 					"left"			    :  5,
 					"right"			    :  10,
@@ -86,6 +91,62 @@
 				}
 			}
 		},
+		{
+            "viewType" 		    :  "EditText",
+            "viewProperties"    :  {
+                "width"	    		:  250,
+                "height"	   		:  50,
+                "background"	    :  "#A9A9A9",
+                "alignment"		    :  "START",
+                "margin" 		    :  {
+                    "left"			    :  5,
+                    "right"			    :  10,
+                    "top"			    :  10,
+                    "bottom"			:  10
+                }
+            },
+            "contents"           :  {
+                "text"                 	:  "",
+                "size"	    		    :  5,
+                "color"  			    :  "#696969",
+                "gravity"			    :  "Left",
+                "hint"			        :  "Enter your Email",
+                "padding" 		        :  {
+                    "left"			        :  5,
+                    "right"			        :  5,
+                    "top"			        :  5,
+                    "bottom"			    :  5
+                }
+            }
+        },
+        {
+            "viewType" 		    :  "EditText",
+            "viewProperties"    :  {
+                "width"	    		:  200,
+                "height"	   		:  50,
+                "background"	    :  "#A9A9A9",
+                "alignment"		    :  "END",
+                "margin" 		    :  {
+                    "left"			    :  5,
+                    "right"			    :  10,
+                    "top"			    :  10,
+                    "bottom"			:  10
+                }
+            },
+            "contents"           :  {
+                "text"                 	:  "",
+                "size"	    		    :  5,
+                "color"  			    :  "#000000",
+                "gravity"			    :  "RIGHT",
+                "hint"			        :  "Enter your Phone",
+                "padding" 		        :  {
+                    "left"			        :  5,
+                    "right"			        :  5,
+                    "top"			        :  15,
+                    "bottom"			    :  5
+                }
+            }
+        },
 		{
 			"viewType" 		    :  "CheckBox",
 			"viewProperties"    :  {
@@ -118,7 +179,7 @@
 			"viewType" 		    :  "RadioButton",
 			"viewProperties"    :  {
 				"width"	    		:  300,
-				"height"	   		:  100,
+				"height"	   		:  200,
 				"background"	    :  "#f0f0f0",
 				"alignment"		    :  "END",
 				"margin" 		    :  {
@@ -142,138 +203,11 @@
 				},
 				"options"			    :  [
 					"Male",
-					"Female"		
+					"Female",
+					"Unknown"
 				]
 			}
 		},
-		{
-        			"viewType" 		    :  "RadioButton",
-        			"viewProperties"    :  {
-        				"width"	    		:  300,
-        				"height"	   		:  100,
-        				"background"	    :  "#f0f0f0",
-        				"alignment"		    :  "END",
-        				"margin" 		    :  {
-        					"left"			    :  10,
-        					"right"			    :  10,
-        					"top"			    :  10,
-        					"bottom"			:  10
-        				}
-        			},
-        			"contents"           	:  {
-        				"text"                 	:  "",
-        				"size"	    		    :  8,
-        				"color"  			    :  "#ff0000",
-        				"gravity"			    :  "CENTER_VERTICAL",
-        				"hint"			        :  "",
-        				"padding" 		        :  {
-        					"left"			        :  5,
-        					"right"			        :  5,
-        					"top"			        :  5,
-        					"bottom"			    :  5
-        				},
-        				"options"			    :  [
-        					"Male",
-        					"Female"
-        				]
-        			}
-        		},
-        		{
-                			"viewType" 		    :  "RadioButton",
-                			"viewProperties"    :  {
-                				"width"	    		:  300,
-                				"height"	   		:  100,
-                				"background"	    :  "#f0f0f0",
-                				"alignment"		    :  "END",
-                				"margin" 		    :  {
-                					"left"			    :  10,
-                					"right"			    :  10,
-                					"top"			    :  10,
-                					"bottom"			:  10
-                				}
-                			},
-                			"contents"           	:  {
-                				"text"                 	:  "",
-                				"size"	    		    :  8,
-                				"color"  			    :  "#ff0000",
-                				"gravity"			    :  "CENTER_VERTICAL",
-                				"hint"			        :  "",
-                				"padding" 		        :  {
-                					"left"			        :  5,
-                					"right"			        :  5,
-                					"top"			        :  5,
-                					"bottom"			    :  5
-                				},
-                				"options"			    :  [
-                					"Male",
-                					"Female"
-                				]
-                			}
-                		},
-                		{
-                        			"viewType" 		    :  "RadioButton",
-                        			"viewProperties"    :  {
-                        				"width"	    		:  300,
-                        				"height"	   		:  100,
-                        				"background"	    :  "#f0f0f0",
-                        				"alignment"		    :  "END",
-                        				"margin" 		    :  {
-                        					"left"			    :  10,
-                        					"right"			    :  10,
-                        					"top"			    :  10,
-                        					"bottom"			:  10
-                        				}
-                        			},
-                        			"contents"           	:  {
-                        				"text"                 	:  "",
-                        				"size"	    		    :  8,
-                        				"color"  			    :  "#ff0000",
-                        				"gravity"			    :  "CENTER_VERTICAL",
-                        				"hint"			        :  "",
-                        				"padding" 		        :  {
-                        					"left"			        :  5,
-                        					"right"			        :  5,
-                        					"top"			        :  5,
-                        					"bottom"			    :  5
-                        				},
-                        				"options"			    :  [
-                        					"Male",
-                        					"Female"
-                        				]
-                        			}
-                        		},
-                        		{
-                                			"viewType" 		    :  "RadioButton",
-                                			"viewProperties"    :  {
-                                				"width"	    		:  300,
-                                				"height"	   		:  100,
-                                				"background"	    :  "#f0f0f0",
-                                				"alignment"		    :  "END",
-                                				"margin" 		    :  {
-                                					"left"			    :  10,
-                                					"right"			    :  10,
-                                					"top"			    :  10,
-                                					"bottom"			:  10
-                                				}
-                                			},
-                                			"contents"           	:  {
-                                				"text"                 	:  "",
-                                				"size"	    		    :  8,
-                                				"color"  			    :  "#ff0000",
-                                				"gravity"			    :  "CENTER_VERTICAL",
-                                				"hint"			        :  "",
-                                				"padding" 		        :  {
-                                					"left"			        :  5,
-                                					"right"			        :  5,
-                                					"top"			        :  5,
-                                					"bottom"			    :  5
-                                				},
-                                				"options"			    :  [
-                                					"Male",
-                                					"Female"
-                                				]
-                                			}
-                                		},
 		{
 			"viewType" 		    :  "Spinner",
             "viewProperties"    :  {

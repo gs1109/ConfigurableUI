@@ -1,4 +1,5 @@
-{ 
+{
+    "orientation"          :  "VERTICAL",
 	"view_rows" : 
 	[
 		{
@@ -145,6 +146,134 @@
 				]
 			}
 		},
+		{
+        			"viewType" 		    :  "RadioButton",
+        			"viewProperties"    :  {
+        				"width"	    		:  300,
+        				"height"	   		:  100,
+        				"background"	    :  "#f0f0f0",
+        				"alignment"		    :  "END",
+        				"margin" 		    :  {
+        					"left"			    :  10,
+        					"right"			    :  10,
+        					"top"			    :  10,
+        					"bottom"			:  10
+        				}
+        			},
+        			"contents"           	:  {
+        				"text"                 	:  "",
+        				"size"	    		    :  8,
+        				"color"  			    :  "#ff0000",
+        				"gravity"			    :  "CENTER_VERTICAL",
+        				"hint"			        :  "",
+        				"padding" 		        :  {
+        					"left"			        :  5,
+        					"right"			        :  5,
+        					"top"			        :  5,
+        					"bottom"			    :  5
+        				},
+        				"options"			    :  [
+        					"Male",
+        					"Female"
+        				]
+        			}
+        		},
+        		{
+                			"viewType" 		    :  "RadioButton",
+                			"viewProperties"    :  {
+                				"width"	    		:  300,
+                				"height"	   		:  100,
+                				"background"	    :  "#f0f0f0",
+                				"alignment"		    :  "END",
+                				"margin" 		    :  {
+                					"left"			    :  10,
+                					"right"			    :  10,
+                					"top"			    :  10,
+                					"bottom"			:  10
+                				}
+                			},
+                			"contents"           	:  {
+                				"text"                 	:  "",
+                				"size"	    		    :  8,
+                				"color"  			    :  "#ff0000",
+                				"gravity"			    :  "CENTER_VERTICAL",
+                				"hint"			        :  "",
+                				"padding" 		        :  {
+                					"left"			        :  5,
+                					"right"			        :  5,
+                					"top"			        :  5,
+                					"bottom"			    :  5
+                				},
+                				"options"			    :  [
+                					"Male",
+                					"Female"
+                				]
+                			}
+                		},
+                		{
+                        			"viewType" 		    :  "RadioButton",
+                        			"viewProperties"    :  {
+                        				"width"	    		:  300,
+                        				"height"	   		:  100,
+                        				"background"	    :  "#f0f0f0",
+                        				"alignment"		    :  "END",
+                        				"margin" 		    :  {
+                        					"left"			    :  10,
+                        					"right"			    :  10,
+                        					"top"			    :  10,
+                        					"bottom"			:  10
+                        				}
+                        			},
+                        			"contents"           	:  {
+                        				"text"                 	:  "",
+                        				"size"	    		    :  8,
+                        				"color"  			    :  "#ff0000",
+                        				"gravity"			    :  "CENTER_VERTICAL",
+                        				"hint"			        :  "",
+                        				"padding" 		        :  {
+                        					"left"			        :  5,
+                        					"right"			        :  5,
+                        					"top"			        :  5,
+                        					"bottom"			    :  5
+                        				},
+                        				"options"			    :  [
+                        					"Male",
+                        					"Female"
+                        				]
+                        			}
+                        		},
+                        		{
+                                			"viewType" 		    :  "RadioButton",
+                                			"viewProperties"    :  {
+                                				"width"	    		:  300,
+                                				"height"	   		:  100,
+                                				"background"	    :  "#f0f0f0",
+                                				"alignment"		    :  "END",
+                                				"margin" 		    :  {
+                                					"left"			    :  10,
+                                					"right"			    :  10,
+                                					"top"			    :  10,
+                                					"bottom"			:  10
+                                				}
+                                			},
+                                			"contents"           	:  {
+                                				"text"                 	:  "",
+                                				"size"	    		    :  8,
+                                				"color"  			    :  "#ff0000",
+                                				"gravity"			    :  "CENTER_VERTICAL",
+                                				"hint"			        :  "",
+                                				"padding" 		        :  {
+                                					"left"			        :  5,
+                                					"right"			        :  5,
+                                					"top"			        :  5,
+                                					"bottom"			    :  5
+                                				},
+                                				"options"			    :  [
+                                					"Male",
+                                					"Female"
+                                				]
+                                			}
+                                		},
 		{
 			"viewType" 		    :  "Spinner",
             "viewProperties"    :  {

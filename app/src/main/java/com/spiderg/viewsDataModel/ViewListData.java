@@ -30,8 +30,11 @@ public class ViewListData implements Serializable
         this.instance = instance;
     }
 
+
+    @SerializedName("orientation")
+    public String orientation;
+
     @SerializedName("view_rows")
-    @Expose
     public ArrayList<ViewData> view_rows = new ArrayList<ViewData>();
 
 
